@@ -58,7 +58,7 @@ public class ChatBarTimeDisplay {
         TextColor color;
 
         if (Config.NAME_BASED.get()) {
-            color = getColorFromUUID(event.getSender());
+            color = getColorFromUUID(event.getMessageSigner().profileId());
         }
         else {
             color = TextColor.fromRgb(Config.COLOR.get());
